@@ -1,0 +1,25 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E1202110120132.ListaSitiosPage"
+             Title="Lista de Sitios">
+
+    <StackLayout Padding="10">
+        <ListView x:Name="sitiosListView" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Image Source="{Binding Imagen}" HeightRequest="100"/>
+                            <Label Text="{Binding Descripcion}"/>
+                            <Label Text="{Binding Latitud}"/>
+                            <Label Text="{Binding Longitud}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Eliminar Caso" Clicked="OnEliminarClicked"/>
+        <Button Text="Ver Mapa" Clicked="OnVerMapaClicked"/>
+    </StackLayout>
+
+</ContentPage>

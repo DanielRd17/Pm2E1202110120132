@@ -1,0 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             x:Class="PM2E1202110120132.MapaPage"
+             Title="Mapa">
+
+    <StackLayout Padding="10">
+        <maps:Map x:Name="map" IsShowingUser="True">
+            <maps:Map.Pins>
+                <maps:Pin Label="{Binding Descripcion}" 
+                          Address="Ubicación del Sitio"
+                          Position="{Binding Position}" />
+            </maps:Map.Pins>
+        </maps:Map>
+        <Button Text="Compartir Imagen Ubicación" Clicked="OnCompartirClicked"/>
+    </StackLayout>
+
+</ContentPage>
